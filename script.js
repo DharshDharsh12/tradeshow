@@ -283,7 +283,7 @@ function _(ele){
   let finalOrder;
   let instantOrder;
   let currentVoid;
-  boxesPerRow = 4;
+  boxesPerRow = 3;
   function intiate() {
     _("orginal")[0].innerHTML = getBoxes(boxesPerRow);
     currentVoid = _("img")[(_("img")).length-1];
@@ -299,7 +299,6 @@ function _(ele){
   
   intiate();
   
-
 
 
 // Appwrite
@@ -334,6 +333,7 @@ formSubmitButton.addEventListener('click', function(event) {
         const promise = databases.createDocument(
             '65e992ca0106054bf17c',
             '65ea9e10a4abb0074e58', 
+            null,
             ID.unique(),
             { 
                 Name: name,
@@ -345,10 +345,30 @@ formSubmitButton.addEventListener('click', function(event) {
         promise.then(function (response) {
             console.log(response);
             console.log("Stored in Database!");
-            document.querySelector('.error-message').style.display = 'none';
+            displayMessage(DataStored);
+            // document.querySelector('.error-message').style.display = 'none';
         }).catch(function (error) {
             console.error(error);
         });
     }
 });
 
+function displayMessage(message, type = 'info') {
+    const messageContainer = document.getElementById('messageContainer');
+
+    // Clear existing content
+    messageContainer.innerHTML = '';
+
+    // Create message element
+    const messageElement = document.createElement('div');
+    messageElement.classList.add('message', type);
+    messageElement.innerText = message;
+
+    // Append message to container
+    messageContainer.appendChild(messageElement);
+
+    // Automatically hide the message after a certain time (e.g., 5 seconds)
+    setTimeout(() => {
+        messageElement.style.display = 'none';
+    }, 5000); // Adjust the time as per your preference
+}
