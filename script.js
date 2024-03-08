@@ -105,7 +105,7 @@ function _(ele){
     if(finalOrder == instantOrder && onGame){
         currentVoid.classList.remove("shrink");
         console.log(finalOrder == instantOrder);
-        // enableSubmitButton();
+        enableSubmitButton();
         for(let i of _("img")){
             i.parentElement.classList.remove("active");
             i.removeEventListener("click",swapBoxes);
@@ -346,7 +346,7 @@ formSubmitButton.addEventListener('click', function(event) {
         promise.then(function (response) {
             console.log(response);
             console.log("Stored in Database!");
-            // document.querySelector('.error-message').style.display = 'none';
+            document.querySelector('.error-message').style.display = 'none';
         }).catch(function (error) {
             console.error(error);
         });
