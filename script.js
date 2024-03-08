@@ -334,7 +334,6 @@ formSubmitButton.addEventListener('click', function(event) {
         const promise = databases.createDocument(
             '65e992ca0106054bf17c',
             '65ea9e10a4abb0074e58', 
-            null,
             ID.unique(),
             { 
                 Name: name,
