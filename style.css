@@ -9,6 +9,11 @@ body {
     font-optical-sizing: auto;
     font-weight: 600;
     font-style: normal;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .zohoLogo{
