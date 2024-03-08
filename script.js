@@ -105,7 +105,7 @@ function _(ele){
     if(finalOrder == instantOrder && onGame){
         currentVoid.classList.remove("shrink");
         console.log(finalOrder == instantOrder);
-        enableSubmitButton();
+        // enableSubmitButton();
         for(let i of _("img")){
             i.parentElement.classList.remove("active");
             i.removeEventListener("click",swapBoxes);
