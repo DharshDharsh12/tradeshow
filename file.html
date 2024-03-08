@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/appwrite@13.0.1"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Stick+No+Bills:wght@200..800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <section class="homePage" id="homePage">
+        <img class="zohoLogo" src="Group 9.png">
+        <p class="homepage-words">Begin your search for the little guy !</p>
+        <button class="startButton">Start</button>
+    </section>
+    <section class="gamePage" id="gamePage">
+        <p class="gamePage-words">Challenge Accepted !</p>
+        <div class="background"></div>
+        <!-- <div class="sample"></div> -->
+        <div class="orginal"></div>
+        <button class="submitButton"  id="gameSubmit" >Submit</button>
+    </section>
+    <section class="formPage" id="formPage">
+        <p class="formPage-words">Claim your reward !</p>
+        <br>
+        <p class="details-words">Enter your details</p>
+        <div class="input-tags">
+            <p class="input-names">Name</p>
+            <input class="input-fields" id="name" type="text" placeholder="Enter your name">
+            <p class="input-names">Employee ID</p>
+            <input class="input-fields" id="employeeID" type="text" placeholder="123456">
+            <p class="input-names">Team Name</p>
+            <input class="input-fields" id="teamName" type="text" placeholder="Enter your Team Name">
+        </div>
+        <div class="error-message">Please fill all the details.</div>
+        <button class="formSubmit">Submit</button>
+    </section>
+    <section class="exitPage" id="exitPage">
+        <img class="zohoLogo" src="Group 9.png">
+        <p class="exitPage-words">Mark your calendars for March 14,15 and make a visit to Woodlands for your chance to claim reward as the lucky winner of the little guy hunt.</p>
+    </section>
+    <script src="script.js"></script>
+</body>
+</html>

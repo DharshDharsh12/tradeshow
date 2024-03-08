@@ -1,0 +1,430 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Stick No Bills", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+}
+
+.zohoLogo{
+    width: 200px;
+    height: 200px;
+}
+
+/* -------------- HOME PAGE -----------------  */
+
+.homePage {
+    width: 400px;
+    height: 922px;
+    background-color: #E4CDAB;
+    /* background-image: url("yellow-old-paper-textures-53842328.jpg"); */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.homePage.hide {
+    display: none;
+}
+
+.homepage-words{
+    font-size: 50px;
+    padding: 30px;
+    text-align: center;
+}
+
+.startButton{
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+/* ------------ GAME PAGE ---------------  */
+
+.gamePage {
+    width: 400px;
+    height: 922px;
+    background-color: #E4CDAB;
+    display: none;
+    /* display: flex; */
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
+}
+
+.gamePage.show {
+    display: flex;
+}
+
+.submitButton{
+    z-index: 1;
+    padding: 5px 10px;
+}
+
+.gamePage-words{
+    z-index: 2;
+    font-size: 32px;
+}
+
+/* ------------------ FORM PAGE ------------------  */
+
+.formPage {
+    width: 400px;
+    height: 922px;
+    background-color: #E4CDAB;
+    /* background-image: url("yellow-old-paper-textures-53842328.jpg"); */
+    display: none;
+    flex-direction: column;
+    /* align-items: center; */
+    justify-content: center;
+}
+
+.formPage.show {
+    display: flex;
+}
+
+.formPage-words{
+    font-size: 30px;
+    padding: 0px 25px 0px 25px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.details-words{
+    font-size: 20px;
+    padding: 0px 25px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    /* margin-top: -20px; */
+    margin-bottom: 20px;
+}
+
+
+.input-tags{
+    display: flex;
+    flex-direction: column;
+    /* width: 60%; */
+    padding: 5px;
+}
+
+.input-names{
+    margin: 10px 15px 0px 15px;
+    font-size: 20px ;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.input-fields{
+    padding: 8px 15px;
+    /* margin-bottom: 0; */
+    margin: 5px 25px 10px 15px;
+    border: none;
+    border-radius: 5px;
+    font-size: 20px;
+}
+
+.input-fields:focus{
+    outline: none;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+
+.formSubmit{
+    /* width: 20%; */
+    padding: 5px 8px ;    
+    margin: 50px 30px 10px 30px;
+    background-color: black;
+    color: #E4CDAB;
+    border-radius: 5px;
+}
+
+.error-message {
+    color: red;
+    display: none;
+}
+
+/* ----------------- EXIT PAGE ------------------  */
+
+.exitPage {
+    display: none;
+    /* background-image: url("yellow-old-paper-textures-53842328.jpg"); */
+    background-color: #E4CDAB;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.exitPage.show {
+    display: flex;
+}
+
+.exitPage-words{
+    font-size: 20px;
+    padding: 20px 40px;
+    text-align: center;
+    margin-top: -30px ;
+}
+
+/* --------------------------------------- Media Query ---------------------------------------- */
+
+
+/* ------------- Mobile layout - 1 ( IPhone 12 Pro ) ---------------- */
+@media (max-width: 390px) {
+    .homePage, .gamePage, .formPage, .exitPage {
+        width: 100%;
+        height: 844px;
+    }
+}
+
+/* ------------ Mobile layout - 2 and 3 ( Pixel 7 ) ------------- */
+@media (min-width: 391px) and (max-width: 412px) {
+    .homePage, .gamePage, .formPage, .exitPage {
+        width: 100%;
+        height: 915px;
+    }
+}
+
+/* ------------ Mobile layout - 3 ( Galaxy S20 ) -------------- */
+@media (min-width: 413px) {
+    .homePage, .gamePage, .formPage, .exitPage {
+        width: 100%;
+        height: 915px;
+    }
+}
+
+/* ---------------------- Puzzle Page ----------------------------- */
+
+/* *{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    color: white;
+} */
+
+.gate img{
+    height: 100%;
+    width: 100%;
+}
+
+/* body{
+    background-color: #000000;
+    color:rgb(255, 255, 255);
+    height: 100vh;
+    width: 100%;
+    
+} */
+
+
+.gate{
+    z-index: 5;
+    position: absolute;
+    background-color: rgb(0, 0, 0);
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 1s;
+}
+
+.gate .adjustor{
+    height: 50vh;
+    width: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    transition: 1s;
+}
+
+.gate .images{
+    margin: 1vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.gate .chooseImg{
+    height: 20vh;
+    aspect-ratio: 1;
+    margin: 2vh;
+    border-radius: 2vh;
+    overflow: hidden;
+    cursor: pointer;
+    transition: 0.3s;
+    transform: scale(0.9);
+    border: 0.1vh solid white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+}
+
+.chooseImg:hover{
+    border: 0.1vh solid white;
+    transform: scale(1.1);
+    font-size: 4rem;
+}
+
+.levels{
+    font-size: 1.5rem;
+    height: 10vh;
+    width: 30vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.levels .chooseLevel{
+    padding: 1vh;
+    color: black;
+    border-radius: 1vh;
+    cursor: pointer;
+    background-color: rgb(200, 200, 200);
+    transition: 0.3s;
+}
+
+.levels .chooseLevel:hover{
+    transform: scale(1.5);
+    background-color: #fff;
+}
+
+body .close{
+    width: 0;
+    height: 0;
+    transform: scale(1.5);
+    transition: 1s;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    background-color: #000000;
+    border: 0;
+    opacity: 0;
+}
+
+.orginal{
+    margin: 15vh;
+    display: flex;
+    height: fit-content;
+    aspect-ratio: 1;
+    flex-direction: column;
+    position: relative;
+    border-radius: 0.5vh;
+    z-index: 2;
+    background-color: #fff;
+    transition: 2s;
+}
+
+.orginal .rows{
+    display: flex;
+    width: fit-content;
+}
+
+.boxes{
+    height:8vh;
+    aspect-ratio: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    border:0.1vh solid rgb(0, 0, 0);
+    border-radius:0.5vh;
+    overflow: hidden;
+    transition:0.3s;
+}
+
+
+.orginal .completed{
+    border-color: rgba(255, 222, 173, 0);
+    margin: 0;
+}
+
+.orginal .img{
+    height: 100%;
+    aspect-ratio: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    transition:1s;
+    z-index: 0;
+}
+
+.orginal .active{
+    z-index: 1;
+    cursor: pointer;
+    box-shadow:0 0 1vh 0.3vh rgba(0, 0, 0, 0.69);
+    border-color: rgb(255, 255, 255);
+    transform: scale(1.03);
+}
+
+.orginal .active:hover{
+    transform: scale(1.1);
+    box-shadow:0 0 1vh 0.5vh rgba(0, 0, 0, 0.7);
+}
+
+
+.orginal .shrink{
+    opacity: 0;
+}
+
+
+.orginal .boxes img{
+    aspect-ratio: 1;
+    flex-shrink: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.sample{
+    height: 25%;
+    aspect-ratio: 1;
+    border-radius: 1vh;
+    overflow: hidden;
+    margin: 10vh;
+    z-index: 2;
+    /* border: 0.3vh solid white; */
+}
+
+.sample img{
+    height: 100%;
+    width: 100%;
+}
+
+.background{
+    position: absolute;
+    background-color: #E4CDAB;
+    /* background-image: url("yellow-old-paper-textures-53842328.jpg"); */
+    height: 100%;
+    width: 100%;
+    z-index: 1;
+}
+
+
+.snow{
+    background-color: rgba(255, 255, 255, 0.764);
+    height: 3vh;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    position: absolute;
+    top:-7vh;
+    transition-duration: 7s;
+}
+
+.fall{
+    top: 150%;
+}
+
+
+.scaleL{
+    transform: rotate(3deg);
+}
+
+.scaleR{
+    transform: rotate(-3deg);
+}
