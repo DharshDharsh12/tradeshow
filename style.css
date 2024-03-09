@@ -83,13 +83,14 @@ body {
 
 .submitButton{
     z-index: 1;
-    padding: 5px 10px;
+    padding: 10px 13px;
 /*     background-color: #E4CDAB; */
     background-color: black; 
     color: #E4CDAB;
     outline: none;
     border: none;
     border-radius: 5px;
+    font-size: 18px;
 }
 
 .gamePage-words{
@@ -145,7 +146,7 @@ body {
 .input-fields{
     padding: 8px 15px;
     /* margin-bottom: 0; */
-    margin: 5px 25px 10px 15px;
+    margin: 5px 15px 10px 15px;
     border: none;
     border-radius: 5px;
     font-size: 20px;
@@ -158,13 +159,14 @@ body {
 
 .formSubmit{
     /* width: 20%; */
-    padding: 5px 8px ;    
-    margin: 50px 30px 10px 30px;
+    padding: 15px 10px ;    
+    margin: 50px 15px 10px 15px;
     background-color: black;
     color: #E4CDAB;
     border-radius: 5px;
     outline: none;
     border: none;
+    font-size: 20px;
 }
 
 .error-message {
