@@ -58,6 +58,8 @@ body {
     font-size: 18px;
     background-color: black; 
     color: #E4CDAB;
+    outline: none;
+    border: none;
 }
 
 /* ------------ GAME PAGE ---------------  */
@@ -85,6 +87,9 @@ body {
 /*     background-color: #E4CDAB; */
     background-color: black; 
     color: #E4CDAB;
+    outline: none;
+    border: none;
+    border-radius: 5px;
 }
 
 .gamePage-words{
@@ -158,6 +163,8 @@ body {
     background-color: black;
     color: #E4CDAB;
     border-radius: 5px;
+    outline: none;
+    border: none;
 }
 
 .error-message {
