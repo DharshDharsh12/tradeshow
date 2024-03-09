@@ -82,7 +82,9 @@ body {
 .submitButton{
     z-index: 1;
     padding: 5px 10px;
-    background-color: #E4CDAB;
+/*     background-color: #E4CDAB; */
+    background-color: black; 
+    color: #E4CDABl
 }
 
 .gamePage-words{
