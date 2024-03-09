@@ -344,7 +344,7 @@ formSubmitButton.addEventListener('click', function(event) {
         promise.then(function (response) {
             console.log(response);
             console.log("Stored in Database!");
-            displayMessage(DataStored);
+            // displayMessage(DataStored);
             // document.querySelector('.error-message').style.display = 'none';
         }).catch(function (error) {
             console.error(error);
@@ -352,22 +352,3 @@ formSubmitButton.addEventListener('click', function(event) {
     }
 });
 
-function displayMessage(message, type = 'info') {
-    const messageContainer = document.getElementById('messageContainer');
-
-    // Clear existing content
-    messageContainer.innerHTML = '';
-
-    // Create message element
-    const messageElement = document.createElement('div');
-    messageElement.classList.add('message', type);
-    messageElement.innerText = message;
-
-    // Append message to container
-    messageContainer.appendChild(messageElement);
-
-    // Automatically hide the message after a certain time (e.g., 5 seconds)
-    setTimeout(() => {
-        messageElement.style.display = 'none';
-    }, 5000); // Adjust the time as per your preference
-}
